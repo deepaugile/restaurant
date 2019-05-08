@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import CategoryDetails from './categoryDetails.js';
+import CategoryItems from './categoryItems.js';
 
 class Categories extends Component {
 	constructor(props) {
@@ -48,7 +48,7 @@ class Categories extends Component {
 						</li>
 					))}
 				</div>
-				<CategoryDetails catItems={this.state.catItems} selCat={this.state.selCat}></CategoryDetails>
+				<CategoryItems catItems={this.state.catItems} selCat={this.state.selCat}></CategoryItems>
 			</div>
 		)
 	}

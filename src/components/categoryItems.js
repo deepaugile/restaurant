@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 
-class CategoryDetails extends Component {
+class CategoryItems extends Component {
 	render() {
 		const catName = this.props ? this.props.selCat.short_name : '';
 		const catItems = this.props ? this.props.catItems : '';
@@ -33,4 +33,4 @@ class CategoryDetails extends Component {
 
 }
 
-export default CategoryDetails;
+export default CategoryItems;
