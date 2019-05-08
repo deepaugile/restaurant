@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+.menuApp {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
 }
 
 .App-logo {
@@ -34,10 +35,15 @@
 
 .homeContent li{
   list-style: none;
+  font-size: 1.2em;
 }
 
 .catList {
   margin-left: 20px;
+}
+
+.catList h4{
+  margin-bottom: 10px;
 }
 
 .catList a{

@@ -6,7 +6,7 @@ import Categories from './components/categories.js';
 
 function App() {
   return (
-    <div>
+    <div className="menuApp">
       <BrowserRouter>
         <h2>1. Welcome to Chef Chu's Restaurant</h2>
 
