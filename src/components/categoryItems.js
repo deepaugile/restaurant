@@ -10,8 +10,8 @@ class CategoryItems extends Component {
 				<table className="itemsTable">
 					<thead>
 						<tr>
-							<td>Item</td>
-							<td>Description</td>
+							<th>Item</th>
+							<th>Description</th>
 						</tr>
 					</thead>
 					<tbody>

@@ -52,12 +52,21 @@
 }
 
 .itemsTable {
-    border: 1px solid #000;
+    border: 1px solid #ddd;
+}
+
+.itemsTable>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+
+.itemsTable>thead>tr>th {
+  font-weight: bold;
 }
 
 .itemsTable>thead>tr>th,
 .itemsTable>tbody>tr>td {
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     padding: 5px;
 }
 
@@ -78,7 +87,6 @@
   }
 
   .itemsTable {
-    width: 60%;
     display: inline-block;
   }
 }
