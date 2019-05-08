@@ -10,6 +10,7 @@ class Categories extends Component {
 			categories: [],
 			catItems: [],
 			selCat: [],
+			show: false
 		}
 	}
 
@@ -29,6 +30,7 @@ class Categories extends Component {
 				this.setState({
 					catItems: response.data,
 					selCat: category,
+					show: true
 				})
 			})
 			.catch(error => console.log(error))
@@ -48,7 +50,7 @@ class Categories extends Component {
 						</li>
 					))}
 				</div>
-				<CategoryItems catItems={this.state.catItems} selCat={this.state.selCat}></CategoryItems>
+				{this.state.show ? <CategoryItems catItems={this.state.catItems} selCat={this.state.selCat}></CategoryItems> : '' }
 			</div>
 		)
 	}

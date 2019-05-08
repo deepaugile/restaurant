@@ -51,6 +51,38 @@
   color: #000;
 }
 
+.itemsTable {
+    border: 1px solid #000;
+}
+
+.itemsTable>thead>tr>th,
+.itemsTable>tbody>tr>td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.itemsTable>tbody>tr>td {
+  padding: 5px;
+}
+
+
+.itemsTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9
+}
+
+@media only screen and (min-width: 944px) {
+  .catList {
+    display: inline-block;
+    width: 30%;
+    float: left;
+  }
+
+  .itemsTable {
+    width: 60%;
+    display: inline-block;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

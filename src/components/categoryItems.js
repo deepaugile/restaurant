@@ -7,7 +7,7 @@ class CategoryItems extends Component {
 		return (
 			<div>
 				<h4>Items in Category: ({catName})</h4>
-				<table border="1">
+				<table className="itemsTable">
 					<thead>
 						<tr>
 							<td>Item</td>
