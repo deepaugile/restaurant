@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import CategoryDetails from './categoryDetails.js';
 
 class Categories extends Component {
 	constructor(props) {
@@ -9,6 +9,7 @@ class Categories extends Component {
 		this.state = {
 			categories: [],
 			catItems: [],
+			selCat: [],
 		}
 	}
 
@@ -26,7 +27,8 @@ class Categories extends Component {
 		axios.get(`https://stream-restaurant-menu-svc.herokuapp.com/item?category=${category.short_name}`)
 			.then(response => {
 				this.setState({
-					catItems: response.data
+					catItems: response.data,
+					selCat: category,
 				})
 			})
 			.catch(error => console.log(error))
@@ -34,16 +36,19 @@ class Categories extends Component {
 
 	render() {
 		return (
-			<div className="catList">
-				<h4>Menu Categories</h4>
+			<div>
+				<div className="catList">
+					<h4>Menu Categories</h4>
 
-				{this.state.categories.map((category) => (
-					<li key={category.id}>
-						<Link to={`#/items/${category.short_name}`} onClick={() => this.getCatItems(category)}>
-							{category.name} - ({category.short_name})
-						</Link>
-					</li>
-				))}
+					{this.state.categories.map((category) => (
+						<li key={category.id}>
+							<Link to={`#/items/${category.short_name}`} onClick={() => this.getCatItems(category)}>
+								{category.name} - ({category.short_name})
+							</Link>
+						</li>
+					))}
+				</div>
+				<CategoryDetails catItems={this.state.catItems} selCat={this.state.selCat}></CategoryDetails>
 			</div>
 		)
 	}
