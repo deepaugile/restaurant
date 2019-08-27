@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CategoryItems from './categoryItems.js';
+import '../App.css';
 
 class Categories extends Component {
 	constructor(props) {
@@ -43,7 +44,7 @@ class Categories extends Component {
 					<h4>Menu Categories</h4>
 
 					{this.state.categories.map((category) => (
-						<li key={category.id}>
+						<li className="list-style" key={category.id}>
 							<Link to={`#/items/${category.short_name}`} onClick={() => this.getCatItems(category)}>
 								{category.name} - ({category.short_name})
 							</Link>

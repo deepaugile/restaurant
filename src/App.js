@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="menuApp">
       <BrowserRouter>
-        <h2>1. Welcome to Chef Chu's Restaurant</h2>
+        <h2>Welcome to Chef Chu's Restaurant</h2>
 
         <Link to="/" className="navBtn">Home</Link>
         <Link to="/categories" className="navBtn">Categories</Link>
